@@ -48,11 +48,7 @@ class Movie(
     val networks: Networks?,
     val updatedAt: String,
     val createdAt: String
-){
-    override fun toString(): String {
-        return name
-    }
-}
+)
 
 data class ExternalId(
     val kpHD: String?,

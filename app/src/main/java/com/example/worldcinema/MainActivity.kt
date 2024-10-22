@@ -65,14 +65,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getRandomMovie() {
-        val call = RetrofitClient.api.getRandomMovie(apiKey)
+        val call = RetrofitClient.api.getRandomMovie()
 
         call.enqueue(object : Callback<Movie> {
             override fun onResponse(call: Call<Movie>, response: Response<Movie>) {
                 if (response.isSuccessful) {
                     val movie = response.body()
                     movie?.let {
-                        // Обработка данных
+
                         Log.d("MovieData", it.toString())
                     }
                 } else {
