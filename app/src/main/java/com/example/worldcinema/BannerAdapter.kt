@@ -3,11 +3,10 @@ package com.example.worldcinema
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 
-class BannerAdapter(val listBanner: List<BannerInfo>) :
+class BannerAdapter(val listBanner: List<FilmInfo>) :
     RecyclerView.Adapter<BannerAdapter.ViewHolder>() {
     open class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val imagePath: ImageView = view.findViewById(R.id.imageViewForBanner)
