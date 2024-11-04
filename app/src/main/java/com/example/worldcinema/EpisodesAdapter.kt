@@ -6,10 +6,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.worldcinema.FilmInfoAdapter.ViewHolder
-import org.w3c.dom.Text
+import com.example.worldcinema.model.Episode
 
-class EpisodesAdapter(val dataSet: List<Episode>): RecyclerView.Adapter<EpisodesAdapter.ViewHolder>() {
+class EpisodesAdapter(private val dataSet: List<Episode>): RecyclerView.Adapter<EpisodesAdapter.ViewHolder>() {
 
     open class ViewHolder(view: View): RecyclerView.ViewHolder(view){
         val imageSource: ImageView = view.findViewById(R.id.imageViewForEpisode)

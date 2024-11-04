@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F1000000"
     tools:context=".film">
 
     <androidx.core.widget.NestedScrollView
@@ -25,8 +26,43 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/previewfilm" />
+                    app:srcCompat="@drawable/preview2" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/backImageButton"
+                        android:layout_weight="1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/left"
+                        android:scaleType="centerInside"
+                        android:background="@null"/>
+
+                    <TextView
+                        android:layout_weight="20"
+                        android:textSize="25sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:text="1+1"/>
+
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/age" />
+
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/tinder" />
+                </LinearLayout>
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewForGenres"
                     android:layout_gravity="bottom|center"

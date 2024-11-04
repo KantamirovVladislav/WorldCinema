@@ -5,11 +5,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.worldcinema.model.Episode
 import com.example.worldcinema.model.FilmBanner
 import com.example.worldcinema.model.FilmInfo
 
-class BannerAdapter(val listBanner: List<FilmInfo>) :
-    RecyclerView.Adapter<BannerAdapter.ViewHolder>() {
+class CadrAdapter(val listBanner: List<Episode>) :
+    RecyclerView.Adapter<CadrAdapter.ViewHolder>() {
     open class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val imagePath: ImageView = view.findViewById(R.id.imageViewForBanner)
     }
@@ -24,6 +25,6 @@ class BannerAdapter(val listBanner: List<FilmInfo>) :
     override fun getItemCount(): Int = listBanner.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.imagePath.setImageResource(listBanner[position].imageSource)
+        holder.imagePath.setImageResource(listBanner[position].preview)
     }
 }

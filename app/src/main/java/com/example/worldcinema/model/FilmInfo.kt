@@ -1,4 +1,4 @@
-package com.example.worldcinema
+package com.example.worldcinema.model
 
 data class FilmInfo(
     val title: String,

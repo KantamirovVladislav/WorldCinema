@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.HORIZONTAL
+import androidx.recyclerview.widget.RecyclerView.VERTICAL
 import com.example.worldcinema.BannerAdapter.ViewHolder
 
 class UserActivityAdapter(val dataSet: List<UserActivityContent>): RecyclerView.Adapter<UserActivityAdapter.ViewHolder>() {
@@ -25,11 +26,28 @@ class UserActivityAdapter(val dataSet: List<UserActivityContent>): RecyclerView.
     override fun getItemCount(): Int = dataSet.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
-        holder.text.text = dataSet[position].nameActivity
-        holder.recyclerView.adapter = BannerAdapter(dataSet[position].content)
-        holder.recyclerView.layoutManager = LinearLayoutManager(holder.itemView.context).apply { this.orientation = HORIZONTAL }
+        when(dataSet[position].nameActivity){
+            "В тренде" -> {
+                holder.text.text = dataSet[position].nameActivity
+                holder.recyclerView.adapter = BannerAdapter(dataSet[position].content)
+                holder.recyclerView.layoutManager = LinearLayoutManager(holder.itemView.context).apply { this.orientation = HORIZONTAL }
+            }
+            "Вы смотрели" -> {
+                holder.text.text = dataSet[position].nameActivity
+                holder.recyclerView.adapter = BannerAdapter(dataSet[position].content)
+                holder.recyclerView.layoutManager = LinearLayoutManager(holder.itemView.context).apply { this.orientation = HORIZONTAL }
+            }
+            "Новое" -> {
+                holder.text.text = dataSet[position].nameActivity
+                holder.recyclerView.adapter = BannerAdapter(dataSet[position].content)
+                holder.recyclerView.layoutManager = LinearLayoutManager(holder.itemView.context).apply { this.orientation = HORIZONTAL }
+            }
+            "Для вас" -> {
+                holder.text.text = dataSet[position].nameActivity
+                holder.recyclerView.adapter = BannerAdapter(dataSet[position].content)
+                holder.recyclerView.layoutManager = LinearLayoutManager(holder.itemView.context).apply { this.orientation = HORIZONTAL }
+            }
+            else -> return
+        }
     }
-
-
 }
