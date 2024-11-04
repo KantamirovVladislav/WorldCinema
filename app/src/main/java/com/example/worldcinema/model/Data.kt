@@ -5,7 +5,7 @@ import com.example.worldcinema.R
 object Data {
     var dataSetFilmInfo = mutableListOf<FilmInfo>(
         FilmInfo(
-            "Русалка",
+            "1+1",
             genres = listOf(
                 "ужасы",
                 "фэнтези",
@@ -41,7 +41,7 @@ object Data {
 
     var dataSetBanner1 = mutableListOf<FilmInfo>(
         FilmInfo(
-            title = "Русалка",
+            title = "1+1",
             imageSource = R.drawable.preview2,
             episodes = listOf(Episode(title = " ", description = " ", duration = " ", preview = 1)),
             genres = listOf(),

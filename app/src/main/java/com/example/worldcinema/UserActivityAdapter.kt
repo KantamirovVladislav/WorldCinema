@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView.HORIZONTAL
 import androidx.recyclerview.widget.RecyclerView.VERTICAL
 import com.example.worldcinema.BannerAdapter.ViewHolder
 
-class UserActivityAdapter(val dataSet: List<UserActivityContent>): RecyclerView.Adapter<UserActivityAdapter.ViewHolder>() {
+class UserActivityAdapter(var dataSet: List<UserActivityContent>): RecyclerView.Adapter<UserActivityAdapter.ViewHolder>() {
     open class ViewHolder(view: View): RecyclerView.ViewHolder(view){
         val text: TextView = view.findViewById(R.id.textViewForUserActivityName)
         var recyclerView: RecyclerView = view.findViewById(R.id.recyclerViewForUserActivityName)
@@ -49,5 +49,9 @@ class UserActivityAdapter(val dataSet: List<UserActivityContent>): RecyclerView.
             }
             else -> return
         }
+    }
+    fun updateData(newDataSet: List<UserActivityContent>) {
+        dataSet = newDataSet
+        notifyDataSetChanged()
     }
 }
